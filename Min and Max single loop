@@ -1,0 +1,41 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+    
+console.log("Min and Max using same loop");
+let a =[10,20];
+let n =a.length
+function minMax(a,n)
+{ let max=a[0],min=a[0];
+    if(n==1)
+    {
+        console.log("This number is both max and min" +a[0]);
+        return;
+    }
+    if(n==2)
+    {
+        if(a[0]>a[1])
+        {
+            max=a[0];
+            min=a[1]
+        }
+        else
+        {
+            min=a[0];
+            max=a[1]
+        }
+        console.log(max);
+        console.log(min);
+       return;
+    }
+    for(let i=2;i<n;i++)
+    {
+        if(a[i]>max)
+        max=a[i];
+        else if(a[i]<min)
+        min=a[i]
+    }
+    console.log(max);
+    console.log(min);
+       return;
+}
+minMax(a,n);
