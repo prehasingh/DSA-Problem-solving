@@ -1,0 +1,23 @@
+var p,q,midv=0;
+        p =0;
+        q =n-1;
+        
+        while(p<=q)
+        {
+            midv =(p+q)/2;
+            if(arr[midv]==k)
+            {
+            return  midv;
+            }
+            else if(arr[midv]<k)
+            {
+            p=midv+1;
+            }
+            else 
+            {
+                q=midv-1
+            }
+        }
+        if(p>q)
+        return -1;
+    }
