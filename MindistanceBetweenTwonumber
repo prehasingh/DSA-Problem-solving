@@ -1,0 +1,33 @@
+ minDist(a, n, x, y)
+    {
+        // code here
+let i,found=0,storex =-1,storey=-1,min,minstore;
+var maxint = Math.pow(2, 53);
+var max_so_far = maxint-1
+        for(i=0;i<n;i++)
+        {
+            if(a[i]==x)
+            {
+                storex=i;
+                storex++;
+            }
+            if(a[i]==y)
+            {
+                storey=i;
+                storey++;
+            }
+           if(storex!=-1 && storey!=-1)
+           {
+               min =Math.abs(storey-storex);
+               if(max_so_far>min)
+               max_so_far =min
+           }
+        }
+        if(storex!=-1 && storey!=-1)
+         return max_so_far;
+         else
+         return  -1;
+         
+    }
+   
+}
