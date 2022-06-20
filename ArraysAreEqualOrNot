@@ -1,0 +1,16 @@
+lass Solution {
+    //Function to check if two arrays are equal or not.
+    check(A,B,N){
+        // code here
+       A.sort(function(a, b){return a - b});
+      B.sort(function(a, b){return a - b});
+        let i;
+        for(i=0;i<N;i++)
+        {
+            if(A[i]!=B[i])
+            return 0;
+        }
+        return 1;
+    }
+    
+}
