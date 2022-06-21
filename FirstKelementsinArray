@@ -1,0 +1,18 @@
+ let arr = [1, 7, 4, 3, 4, 8, 7];
+    let n =arr.length;
+    let k=2;
+
+    function firstElementKTime(arr,n,k){
+        //code her
+         let  mape=new Map();
+           for (let i=0; i<n; i++)
+        mape[arr[i]] = 0;
+        console.log(mape)
+           for(let i=0;i<n;i++)
+           { 
+               mape[arr[i]]++;
+           }
+           console.log(mape)
+           console.log("-1");
+    }
+   firstElementKTime(arr,n,k);
