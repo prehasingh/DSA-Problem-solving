@@ -1,0 +1,28 @@
+lass Solution {
+    
+    sort012(arr, N)
+    {
+        //your code here
+         let i,count1=0,count2=0,count0=0,p
+         for(i=0;i<N;i++)
+         {
+             if(arr[i]==1)
+             count1++;
+             if(arr[i]==0)
+             count0++;
+             if(arr[i]==2)
+             count2++;
+         }
+           for(i=0;i<count0;i++)
+         arr[i]=0;
+       
+          for(i=p;i<count1+p;i++)
+          arr[i]=1;
+          p=i;
+         for(i=p;i<count2+p;i++)
+         arr[i]=2;
+        //  console.log(arr);
+         
+        
+    }
+}
