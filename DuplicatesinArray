@@ -1,0 +1,30 @@
+class Solution {
+    
+    duplicates(a, n)
+    {
+        //your code here
+         let res=[];
+         
+        for(let i=0;i<n;i++)
+        {
+          a[a[i]%n]= a[a[i]%n]+n;
+            
+        }
+        for(let i=0;i<n;i++)
+        {
+            let k= Math.floor (a[i]/n)
+            if(k >1)
+            {
+                res.push(i)
+            }
+        }
+        let result = res.length;
+        if(result==0)
+        res.push(-1)
+        return res;
+      
+         
+        
+      
+}
+}
