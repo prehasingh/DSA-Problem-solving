@@ -1,0 +1,36 @@
+class Solution{
+    segregateElements(arr,n){
+        //code here
+        let pos= []
+        let nos =[]
+        let i,k=0,m=0;
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]<0)
+            {
+                nos[k]=arr[i]
+                k++;
+            }
+            else
+            {
+                pos[m]=arr[i]
+                m++;
+            }
+        }
+        for(i=0;i<m;i++)
+        {
+            arr[i]=pos[i];
+        }
+        let p =i,start=0;
+        
+        for(i=p;i<k+p;i++)
+        {
+            arr[i]=nos[start]
+            start++;
+        }
+        
+    }
+}
+
+
+
