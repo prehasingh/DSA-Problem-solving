@@ -1,0 +1,41 @@
+class Solution {
+    
+    max_path_sum(a, b, M, N)
+    {
+        let i=0,j=0,sumA=0,sumB=0,maxSum=0;
+
+while(i<M && j<N){
+           if(a[i]==b[j]){
+               sumA+=a[i];
+               sumB+=b[j];
+               maxSum+=Math.max(sumA,sumB);
+               sumA=0; 
+               sumB=0;
+               i++;
+               j++;
+           }
+           else if(a[i]<b[j]){
+               sumA+=a[i];
+               i++;                
+           }
+           else{
+               sumB+=b[j];
+               j++;                
+           }
+       }
+       while(i<M){
+           sumA+=a[i];
+           i++;
+       }
+       
+       while(j<N){
+           sumB+=b[j];
+           j++;
+       }
+       
+       maxSum+=Math.max(sumA,sumB);
+       
+       return maxSum;
+
+    }
+}
