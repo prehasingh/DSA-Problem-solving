@@ -1,0 +1,13 @@
+ let arr =[-1, 2, -1, 3, 2,5]
+    let n =6;
+ let map = new Map();
+        let i;
+        for(i=0;i<n;i++)
+        {
+            map[arr[i]]=0;
+        }
+        for(i=0;i<n;i++)
+        {
+            map[arr[i]]++;
+        }
+        console.log(map)
